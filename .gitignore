@@ -1,0 +1,93 @@
+# Credenciais / segredos (NUNCA versionar)
+.env
+*-cookies.txt
+*_cookies.txt
+solyd-token.json
+*token.json
+*.session
+
+# Downloads / cursos baixados
+downloads/
+/Solyd/
+Alem\303\243o/
+Alemão/
+tecconcursos/
+estrategia_tester/
+login_estrategia/
+testados/
+har/
+vps_deploy/
+
+# Capturas HAR e dumps de rede
+*.har
+
+# Saídas de teste / dados temporários
+testados_*.txt
+busca_ultrachunk_*.txt
+tree.txt
+ead_response.html
+seed - Copia*.txt
+biblioteca.txt
+chat.txt
+redes.txt
+proxyss*.txt
+
+# Scripts avulsos / scratch
+analyze_ativo*.py
+_42sp_*.py
+migrate_fluency_units.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# UV / virtualenv
+.venv/
+.uv/
+
+# Build
+dist/
+*.egg-info/
+
+# HTML de referência
+# *.html
+
+# Editor
+.vscode/
+.idea/
+*.swp
+katomart-master/
+# Transcrição (áudio pesado + chaves de API)
+.transcricao/audio/
+.transcricao/groq.key
+.transcricao/curso_dir.txt
+cdm/
+*.wvd
+/crunchyroll
+/primevideo
+/minhabiblioteca
+/viki
+/globo
+/paramountplus
+/disneyplus
+disneyplus_token.txt
+globo_suelen
+
+# Dados pesados / backups (nao versionar)
+downloads2/
+_transcricoes_backup/
+
+# Scripts one-off / scratch de download e relatorio
+globoplay_reorg.py
+hotmart_inventario.json
+hotmart_matvisual.log
+
+# Combos / proxies (credenciais — NUNCA versionar)
+seed.txt
+seed.txt.old
+seed*.txt
+proxy.txt
+proxy*.txt

@@ -1,0 +1,53 @@
+[project]
+name = "supercourses"
+version = "0.1.0"
+description = "Multi-platform course scraper aggregator"
+requires-python = ">=3.11"
+dependencies = [
+    "rich>=13.7",
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+    "yt-dlp>=2024.1",
+    "html2text>=2020.1",
+    "python-dotenv>=1.0",
+    "pycryptodome>=3.20",
+    "curl-cffi>=0.10,<0.15",
+    "pycparser==2.22",
+    "playwright>=1.45",
+    "patchright>=1.50",
+    "pywidevine>=1.8",
+    "pillow>=10.0",
+    "img2pdf>=0.5",
+    "pymupdf>=1.26",
+    "genanki>=0.13",
+    "markdown>=3.5",
+    "pycryptodomex>=3.23.0",
+]
+
+[project.scripts]
+supercourses = "src.cli.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.3",
+]
+
+[tool.ruff.lint]
+# Tripwire de BUGS, não estilo: nome/import indefinido (F821/F822), redefinição
+# (F811), syntax (E9/F7), formatação de string quebrada (F50x). As regras de
+# limpeza (F401 import não usado, F841 variável não usada, F541) ficam de fora
+# pra não virar muro de ruído num codebase legado.
+select = ["E9", "F"]
+ignore = ["F401", "F841", "F541"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
